@@ -1,0 +1,11 @@
+*{
+    margin: 0;padding: 0;
+}
+.container1{
+    margin: 2rem 7.5rem 2rem 7.5rem;
+    height: 100%;
+    /* background-color: red; */
+}
+.container1 h4{
+    text-align: center;
+}

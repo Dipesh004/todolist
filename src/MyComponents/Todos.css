@@ -1,0 +1,11 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    text-align: left;
+}
+.container{
+min-height: 77.6vh;
+}
+.message{
+    text-align:center;
+}
