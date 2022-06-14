@@ -14,10 +14,10 @@ function App() {
   } else {
     inittodo = JSON.parse(localStorage.getItem("x"));
   }
-  
+
   const onDelete = (todo) => {
-    return(
-    console.log("i am on delete of todo", todo),
+    return (
+      console.log("i am on delete of todo", todo),
       settodos(todos.filter((e) => {
         return e !== todo;
       }))
@@ -31,6 +31,7 @@ function App() {
       Sno: todos.length,
       Title: a,
       Description: b,
+      
     }
     settodos([...todos, Mytodo]);
     console.log(Mytodo)
@@ -38,13 +39,11 @@ function App() {
     // localStorage.setItem("todos",JSON.stringify(todos));
   }
 
-
   const [todos, settodos] = useState(inittodo)
 
   useEffect(() => {
     localStorage.setItem("x", JSON.stringify(todos))
   }, [todos])
-
 
   return (
     <>
