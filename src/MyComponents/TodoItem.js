@@ -13,8 +13,8 @@ const TodoItem = (props) => {
   const [colorchange,setcolorchange]=useState(initcolor);
   
   useEffect(()=>{
-    localStorage.setItem(props.todo.Sno,colorchange)
-  },[colorchange])
+  //  eslint-disable-next-line
+    localStorage.setItem(props.todo.Sno,colorchange)},[colorchange])
 
   const ColorChange=()=>{
     setcolorchange("container4")
@@ -37,4 +37,4 @@ const TodoItem = (props) => {
     </>
   )
 }
-export default TodoItem
+export default TodoItem;
