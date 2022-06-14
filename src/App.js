@@ -14,9 +14,7 @@ function App() {
   } else {
     inittodo = JSON.parse(localStorage.getItem("x"));
   }
-  const animation=(x)=>{
-    
-  }
+  
   const onDelete = (todo) => {
     return(
     console.log("i am on delete of todo", todo),

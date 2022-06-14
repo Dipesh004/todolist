@@ -9,7 +9,7 @@ const TodoItem = (props) => {
       <p>
         {props.todo.Description}
       </p>
-      <Button variant="success btn-sm" onClick={()=>{props.animation(props.todo)}}>press if done</Button>{' '}
+      <Button variant="success btn-sm" >press if done</Button>{' '}
       <button type="button" className="btn btn-danger btn-sm" onClick={() => { props.onDelete(props.todo) }} >Delete</button>
       <hr />
 

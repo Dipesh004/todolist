@@ -12,7 +12,7 @@ const Todos = (props) => {
       <h3 className='text-center'>Todos List</h3>
       {props.todos.length === 0 ? <h5 className="message">No Todos To Display</h5>  : props.todos.map((todo) => {
         return(
-        <TodoItem todo={todo} key={todo.Sno} onDelete={props.onDelete} animation={props.animation} />
+        <TodoItem todo={todo} key={todo.Sno} onDelete={props.onDelete} />
       )})}
 
     </div>
