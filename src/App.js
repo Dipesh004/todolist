@@ -5,15 +5,25 @@ import Header from "./MyComponents/Header"
 import AddTodo from "./MyComponents/AddTodo"
 import Todos from "./MyComponents/Todos"
 import Footer from "./MyComponents/Footer"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function App() {
-  const onDelete = (x) => {
-    return (
-      console.log("i am on delete of todo", x),
+  let inittodo;
+  if (localStorage.getItem("x") === null) {
+    inittodo = [];
+  } else {
+    inittodo = JSON.parse(localStorage.getItem("x"));
+  }
+  const animation=(x)=>{
+    
+  }
+  const onDelete = (todo) => {
+    return(
+    console.log("i am on delete of todo", todo),
       settodos(todos.filter((e) => {
-        return e !== x;
+        return e !== todo;
       }))
+      // localStorage.setItem("todos", JSON.stringify(todos))
     )
   }
 
@@ -26,9 +36,16 @@ function App() {
     }
     settodos([...todos, Mytodo]);
     console.log(Mytodo)
+
+    // localStorage.setItem("todos",JSON.stringify(todos));
   }
 
-  const [todos, settodos] = useState([])
+
+  const [todos, settodos] = useState(inittodo)
+
+  useEffect(() => {
+    localStorage.setItem("x", JSON.stringify(todos))
+  }, [todos])
 
 
   return (

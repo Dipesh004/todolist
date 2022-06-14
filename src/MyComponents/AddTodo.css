@@ -2,6 +2,7 @@
     margin: 0;padding: 0;
 }
 .container1{
+    min-height: auto;
     margin: 2rem 7.5rem 2rem 7.5rem;
     height: 100%;
     /* background-color: red; */

@@ -13,6 +13,8 @@ function AddTodo(props) {
             alert("Title or Desc Cannot be empty");
         }else{
             props.addTodo(Title,Description);
+            settitle("");
+            setdesc("");
         }
     }
     return (
